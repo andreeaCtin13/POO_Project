@@ -1,4 +1,4 @@
-5
+9
 Stamate
 Andreea
 0727590226
@@ -12,7 +12,7 @@ Aleea Gornesti nr.1
 455.7
 50
 76.5
-Constantin
+Darius
 Vlad
 0727590226
 20
@@ -64,3 +64,31 @@ Aleea Gornesti nr.1
 455.7
 50
 76.5
+Cojocaru
+Ana
+0727590226
+20
+Aleea Gornesti 1
+1
+0
+Felix
+Ioana
+0727590227
+20
+Aleea Gornesti 1
+1
+0
+Nistor
+Bianca
+0727590228
+20
+Aleea Gornesti 1
+1
+0
+Hristache
+Ionela
+0727590229
+20
+Aleea Gornesti 1
+1
+0

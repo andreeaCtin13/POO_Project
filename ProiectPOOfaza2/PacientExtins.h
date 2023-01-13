@@ -176,16 +176,19 @@ public:
 	#pragma region OperatorEgal
 	PacientExtins& operator=(const PacientExtins& p)
 	{
-		Pacient::operator=(p);
-		this->areAlergii = p.areAlergii;
-		if (this->areAlergii) {
-			this->nrAlergii = p.nrAlergii;
-			for (int i = 0; i < this->nrAlergii; i++) {
-				this->alergii[i] = p.alergii[i];
+		if (this != &p) {
+
+			Pacient::operator=(p);
+			this->areAlergii = p.areAlergii;
+			if (this->areAlergii) {
+				this->nrAlergii = p.nrAlergii;
+				for (int i = 0; i < this->nrAlergii; i++) {
+					this->alergii[i] = p.alergii[i];
+				}
 			}
-		}
-		for (auto& str : p.boli) {
-			this->boli.insert(str);
+			for (auto& str : p.boli) {
+				this->boli.insert(str);
+			}
 		}
 		return *this;
 	}

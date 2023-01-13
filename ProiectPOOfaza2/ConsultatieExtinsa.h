@@ -8,21 +8,26 @@ using namespace std;
 #include "Functii.h"
 #include "Medic.h"
 #include "Consultatie.h"
-
+#include <map>
 #pragma region Clasa_ConsultatieExtinsa
 class ConsultatieExtinsa:public Consultatie {
 	string servicii="";
 	static list<string> listaServicii;
+	static map<string,float> listaPreturi;
+
 public:
 
 	ConsultatieExtinsa():Consultatie() {
 		this->servicii = "";
 		ConsultatieExtinsa::setListaServicii();
+		ConsultatieExtinsa::setListaPreturi();
 	}
 
 	ConsultatieExtinsa(const int ora, const int zi, const int luna, const int an, string servcii):Consultatie(ora,zi,luna, an) {
 		ConsultatieExtinsa::setListaServicii();
+		ConsultatieExtinsa::setListaPreturi();
 		list<string>::iterator itList;
+		map<string, float>::iterator itMap;
 		int ok = 0;
 		for (itList = ConsultatieExtinsa::listaServicii.begin(); itList != ConsultatieExtinsa::listaServicii.end(); itList++) {
 			if (*itList == servicii) {
@@ -30,9 +35,17 @@ public:
 				this->servicii = servicii;
 			}
 		}
+
 		if (ok == 0) {
 			this->servicii = *ConsultatieExtinsa::listaServicii.begin();
 		}
+		ok = 0;
+		for (itList = ConsultatieExtinsa::listaServicii.begin(), itMap = ConsultatieExtinsa::listaPreturi.begin();
+			itList != ConsultatieExtinsa::listaServicii.end(), itMap != ConsultatieExtinsa::listaPreturi.end();
+			itList++, itMap++) {
+			
+		}
+
 	}
 
 	ConsultatieExtinsa(const int ora, const float pret, const int zi, const int luna, const int an, const Medic medic, string servicii):Consultatie(ora, pret, zi, luna, an, medic) {
@@ -78,6 +91,7 @@ public:
 		if (ok == 0) {
 			this->servicii = *ConsultatieExtinsa::listaServicii.begin();
 		}
+		
 	}
 
 	static void setListaServicii() {
@@ -86,6 +100,29 @@ public:
 		ConsultatieExtinsa::listaServicii.push_back("operatie");
 		ConsultatieExtinsa::listaServicii.push_back("terapie");
 		ConsultatieExtinsa::listaServicii.push_back("urgenta");
+	}
+
+	static void setListaPreturi() {
+		list<string>::iterator itList;
+		map<string, float>::iterator itMap;
+		float v[6] = {50, 125.5, 700, 200, 400};
+		string* serv = new string[5];
+		int i = 0;
+		for (itList = ConsultatieExtinsa::listaServicii.begin(); itList != ConsultatieExtinsa::listaServicii.end(); itList++){
+			serv[i] = *itList;
+			i++;
+		}
+		i = 0;
+		typedef pair<string, float> pereche;
+		for (itMap = ConsultatieExtinsa::listaPreturi.begin(); itMap != ConsultatieExtinsa::listaPreturi.end(); itMap++) {
+			ConsultatieExtinsa::listaPreturi.insert(pereche(serv[i], v[i]));
+		}
+	}
+
+	void getStaticPreturi(){
+		cout << ConsultatieExtinsa::listaPreturi["analize"];
+		
+		
 	}
 
 	#pragma region OperatorulEgal
@@ -219,3 +256,4 @@ public:
 
 };
 list <string>ConsultatieExtinsa::listaServicii;
+map<string,float>ConsultatieExtinsa::listaPreturi;

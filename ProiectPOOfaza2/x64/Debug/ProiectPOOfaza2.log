@@ -115,24 +115,23 @@ C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Asistent.h(585,68): warni
           [
               TIP=float
           ]
-C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Consultatie.h(98,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Consultatie.h(100,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(350,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
 C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(353,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(928,65): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(930,65): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
           with
           [
               TIP=float
           ]
-C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(1075,65): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(1077,65): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
           with
           [
               TIP=float
           ]
-C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(1042,14): warning C4101: 'ok': unreferenced local variable
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(1044,14): warning C4101: 'ok': unreferenced local variable
 C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\FileManager.h(16,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Rezident.h(162,30): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
-C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\PacientExtins.h(393,16): warning C4101: 'istoricPlati': unreferenced local variable
-C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Source.cpp(45,43): warning C4305: 'argument': truncation from 'double' to 'const float'
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\PacientExtins.h(396,16): warning C4101: 'istoricPlati': unreferenced local variable
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\ConsultatieExtinsa.h(44,11): warning C4834: discarding return value of function with 'nodiscard' attribute
 C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Functii.h(57,24): warning C4244: 'initializing': conversion from 'TIP' to 'int', possible loss of data
           with
           [

@@ -10,6 +10,8 @@ using namespace std;
 #include "Medic.h"
 #include "Data.h"
 
+//cabinet map cu tip de cabinet: sala operatie, medic familie etc
+
 #pragma region Clasa_Consultatie
 class Consultatie {
     const int id;

@@ -722,6 +722,8 @@ public:
             {
                 delete[] this->prenume;
             }
+
+
             if (this->phoneNumber != nullptr) {
                 delete[] this->phoneNumber;
             }

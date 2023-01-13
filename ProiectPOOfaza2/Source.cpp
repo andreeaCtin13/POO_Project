@@ -32,6 +32,7 @@ int main(){
 		cout << "\nORDINEA FISIERELOR TREBUIE SA FIE IN CONFORMITATE CU ORDINEA DE MAI SUS\n";
 	}
 	*/
+	/*
 	int* note;
 	note = new int[4];
 	note[0] = 10;
@@ -91,9 +92,11 @@ int main(){
 	lista[0]->creareRaport(f1);
 	lista[1]->creareRaport(f2);
 	lista[2]->creareRaport(f3);
-
+	*/
 
 	//cin >> pac3;
 	//cout << pac3;
+	ConsultatieExtinsa ce(2, 3, 3, 2029, "consult");
+	ce.getStaticPreturi();
 	//displayMenu("PacientiDeAdaugat.txt", "ConsultatiiDeAdaugat.txt", "MediciDeAdaugat.txt", "AngajatiDeAdaugat.txt", "AsistentiDeAdaugat.txt");
 }
