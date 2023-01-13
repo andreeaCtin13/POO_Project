@@ -1,0 +1,143 @@
+﻿  Source.cpp
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(50,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(75,93): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(75,67): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(128,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(149,95): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(149,69): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(209,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(213,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(251,30): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(267,25): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(317,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(370,93): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(370,67): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(439,42): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(460,99): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(460,73): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(614,89): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(614,64): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(629,34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(732,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(774,93): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(774,68): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Medic.h(123,30): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Medic.h(307,87): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Medic.h(307,64): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Medic.h(322,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Medic.h(442,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Medic.h(485,93): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Medic.h(485,68): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Asistent.h(136,30): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Asistent.h(345,90): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Asistent.h(345,64): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Asistent.h(360,35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Asistent.h(506,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Asistent.h(547,93): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Asistent.h(547,68): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Consultatie.h(99,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(317,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(320,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(902,65): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(1049,65): warning C4244: 'argument': conversion from 'int' to 'TIP', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Pacient.h(1016,14): warning C4101: 'ok': unreferenced local variable
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\FileManager.h(15,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Functii.h(57,24): warning C4244: 'initializing': conversion from 'TIP' to 'int', possible loss of data
+          with
+          [
+              TIP=float
+          ]
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Angajat.h(75,1): message : see reference to function template instantiation 'TIP *verifIstoric<float>(const TIP [],TIP,TIP)' being compiled
+          with
+          [
+              TIP=float
+          ]
+  ProiectPOOfaza2.vcxproj -> C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\x64\Debug\ProiectPOOfaza2.exe
