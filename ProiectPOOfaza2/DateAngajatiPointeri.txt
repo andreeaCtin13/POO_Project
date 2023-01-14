@@ -1,0 +1,10 @@
+
+---------------------------------------------------------
+
+
+
+Date referitoare la Angajatul cu id-ul: 10
+Numele Angajatului: Andreea
+Prenumele Angajatului: Heheh
+Angajatul abia s-a transferat in cadrul acestui centru medicalAngajatul are un salariu in valoare de 5000.7 RON
+Varsta angajatului este de : 28 ani

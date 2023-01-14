@@ -10,6 +10,9 @@
 #include "FileManager.h"
 #include "Colectie.h"
 #include "Data.h"
+#include "ConsultatieExtinsa.h"
+#include "PacientExtins.h"
+#include "Rezident.h"
 
 
 using namespace std;
@@ -75,7 +78,7 @@ void displayMenu(string filePacienti, string fileConsultatii, string fileMedici,
 	angajati.closeFileInTxt();
 
 	while (i != 7) {
-
+		///TO DO: sa adaugi optiunea de a crea o colectie de rezidenti, dar aici, n ai timp sa adaptezi la fileManager
 		cout << "Aveti urmatoarele optiuni: \n";
 		cout << "1 - Generati un raport\n";
 		cout << "2 - Scrieti in fisier text datele colectiilor\n";
@@ -83,8 +86,11 @@ void displayMenu(string filePacienti, string fileConsultatii, string fileMedici,
 		cout << "4 - Adaugarea unei noi inregistrari\n";
 		cout << "5 - Salvati datele aplicatiei in fisiere binare\n";
 		cout << "6 - Adaugati inregistrari de tip Pacient din fisiere csv\n";
-		cout << "7 - Iesiti\n";
+		cout << "7 - Testati array-ul de pointeri aferent familiei Angajat, Medic, Asistent si Rezident\n";
+		cout << "8 - Testati functionalitatile extinderilor\n";
+		cout << "9 - Iesiti\n";
 		cin >> i;
+
 		if (i == 1) {
 			int ok = 1;
 			do {
@@ -255,7 +261,9 @@ void displayMenu(string filePacienti, string fileConsultatii, string fileMedici,
 							cout << "6 - Modificati statusul asigurarii de sanatate a pacientului\n";
 							cout << "7 - Adaugati o plata la istoricul de plati ale pacientului\n";
 							cout << "8 - Programati o noua consultatie pacientului\n";
-							cout << "9 - Inapoi\n";
+							cout << "9 - Semnalati moartea pacientului\n";
+							cout << "10 - Schimbati identitatea pacientului\n";
+							cout << "11 - Inapoi\n";
 							int instr;
 							cin >> instr;
 							if (instr == 1) {
@@ -352,6 +360,14 @@ void displayMenu(string filePacienti, string fileConsultatii, string fileMedici,
 								} while (okay == 1);
 							}
 							else if (instr == 9) {
+								p[index].Moare();
+								cout << "A fost inregistrata moartea pacientului.\n";
+							}
+							else if(instr == 10){
+								p[index].SchimbaIdentitatea();
+								cout << "A fost inregistrata schimbarea identitatii pacientului.\n";
+							}
+							else if (instr == 11) {
 								ok = 0;
 							}
 							else {
@@ -396,7 +412,9 @@ void displayMenu(string filePacienti, string fileConsultatii, string fileMedici,
 							cout << "7 - Modificati specializarea medicului\n";
 							cout << "8 - Adauga un bonus medicului\n";
 							cout << "9 - Scadeti salariul medicului\n";
-							cout << "10 - Inapoi\n";
+							cout << "10 - Semnalati moartea medicului\n";
+							cout << "11 - Schimbati identitatea medicului\n";
+							cout << "12 - Inapoi\n";
 							int j;
 							cin >> j;
 							if (j == 1) {
@@ -472,6 +490,14 @@ void displayMenu(string filePacienti, string fileConsultatii, string fileMedici,
 								cout << "Salariul  a fost actualizat. In momentul de fata salariul medicului este de " << m[index].getSalariu() << endl;
 							}
 							else if (j == 10) {
+								m[index].Moare();
+								cout << "A fost inregistrata moartea medicului.\n";
+							}
+							else if (j == 11) {
+								m[index].SchimbaIdentitatea();
+								cout << "A fost schimbata identitatea medicului.\n";
+							}
+							else if (j == 12) {
 								ok = 0;
 							}
 							else {
@@ -518,7 +544,9 @@ void displayMenu(string filePacienti, string fileConsultatii, string fileMedici,
 							cout << "8 - Adauga un bonus asistentului\n";
 							cout << "9 - Scadeti salariul asistentului\n";
 							cout << "10 - Adaugati un medic asociat asistentului\n";
-							cout << "11 - Inapoi\n";
+							cout << "11 - Semnalati moartea asistentului\n";
+							cout << "12 - Schimbati identitatea asistentului\n";
+							cout << "13 - Inapoi\n";
 							int j;
 							cin >> j;
 							if (j == 1) {
@@ -605,6 +633,14 @@ void displayMenu(string filePacienti, string fileConsultatii, string fileMedici,
 
 							}
 							else if (j == 11) {
+								m[index].Moare();
+								cout << "A fost inregistrata moartea asistentului.\n";
+							}
+							else if (j == 12) {
+								m[index].SchimbaIdentitatea();
+								cout << "A fost  schimbata identitatea asistentului.\n";
+							}
+							else if (j == 13) {
 								okay = 0;
 								ok = 0;
 							}
@@ -633,7 +669,7 @@ void displayMenu(string filePacienti, string fileConsultatii, string fileMedici,
 				}
 			}while (ok == 1);
 		}
-		else if (i == 4) {
+		else if (i == 4 ) {
 			int ok = 1;
 			do {
 				cout << "Ati ales optiunea de a adauga o noua inregistrare\n";
@@ -781,10 +817,52 @@ void displayMenu(string filePacienti, string fileConsultatii, string fileMedici,
 			pacienti.updateColllection(pacienti.getPacienti());	
 		}		
 		else if (i == 7) {
+			cout << "Ati ales optiunea de a testa array-ul de pointeri aferent familiei Angajat, Medic, Asistent si Rezident.\n";
+			cout << "Pentru asta, se vor citi cate un angajat,un medic, un asistent si un rezident, de la atstatura.\n";
+			cout << "Introduceti datele aferente angajatului: \n";
+			Angajat ang;
+			cin >> ang;
+			cout << "Introduceti datele aferente medicului: \n";
+			Medic m;
+			cin >> m;
+			cout << "Introduceti datele aferente asistentului: \n";
+			Asistent a;
+			cin >> a;
+			cout << "Introduceti datele aferente rezidentului:\n";
+			Rezident r;
+			cin >> r;
+			
+			Angajat** lista;
+
+			lista = new Angajat * [4];
+			lista[0] = new Angajat(ang);
+			lista[0] = &ang;
+			lista[1] = new Asistent(a);
+			lista[1] = &a;
+			lista[2] = new Medic(m);
+			lista[2] = &m;
+			lista[3] = new Rezident(r);
+			lista[3] = &r;
+			ofstream f, g, j, k;
+			cout << "Datele aferente fiecaruia vor fi accesibile in fisierele tip: Date_TipClasa_Pointeri.txt.\n";
+			f.open("Date_Angajati_Pointeri.txt", ios::out);
+			g.open("Date_Asistenti_Pointeri.txt", ios::out);
+			j.open("Date_Medici_Pointeri.txt", ios::out);
+			k.open("Date_Rezidenti_Pointeri.txt", ios::out);
+			lista[0]->creareRaport(f);
+			lista[1]->creareRaport(g);
+			lista[2]->creareRaport(j);
+			lista[3]->creareRaport(k);
+		}
+		else if (i == 8) {
+			///to do, sa apelezi extinderile si sa te joci putin cu ele
+		}
+		else if (i == 9) {
 			return;
 		}
 		else {
 			cout << "Ati introdus o comanda invalida\n";
 		}
+
 	}
 }

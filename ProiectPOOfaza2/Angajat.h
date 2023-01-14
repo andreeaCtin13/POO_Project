@@ -211,7 +211,6 @@ public:
         int lenNume = (strlen(this->nume) + 1)*sizeof(char);
         f.write((char*)&lenNume, sizeof(int));
         f.write((char*)&this->nume, lenNume);
-       
         int len = (this->prenume.length())*sizeof(char);
         f.write((char*)&len, sizeof(int));
         f.write((char*)&this->prenume, len);

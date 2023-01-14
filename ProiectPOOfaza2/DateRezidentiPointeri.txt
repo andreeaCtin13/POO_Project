@@ -1,0 +1,10 @@
+
+---------------------------------------------------------
+
+
+
+Date referitoare la Angajatul cu id-ul: 9
+Numele Angajatului: Ionela
+Prenumele Angajatului: Viorica
+Angajatul abia s-a transferat in cadrul acestui centru medicalAngajatul are un salariu in valoare de 0 RON
+Varsta angajatului este de : 0 ani

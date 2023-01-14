@@ -13,9 +13,11 @@ using namespace std;
 class ConsultatieExtinsa:public Consultatie {
 	string servicii="";
 	static list<string> listaServicii;
-	static map<string,float> listaPreturi;
+	static map<float, string> listaPreturi;
 
 public:
+
+	#pragma region Constructori
 
 	ConsultatieExtinsa():Consultatie() {
 		this->servicii = "";
@@ -23,39 +25,35 @@ public:
 		ConsultatieExtinsa::setListaPreturi();
 	}
 
-	ConsultatieExtinsa(const int ora, const int zi, const int luna, const int an, string servcii):Consultatie(ora,zi,luna, an) {
+	ConsultatieExtinsa(const int ora, const int zi, const int luna, const int an, string servicii):Consultatie(ora,zi,luna, an) {
 		ConsultatieExtinsa::setListaServicii();
 		ConsultatieExtinsa::setListaPreturi();
+
 		list<string>::iterator itList;
-		map<string, float>::iterator itMap;
 		int ok = 0;
 		for (itList = ConsultatieExtinsa::listaServicii.begin(); itList != ConsultatieExtinsa::listaServicii.end(); itList++) {
 			if (*itList == servicii) {
 				ok = 1;
 				this->servicii = servicii;
+				this->setPret(this->getStaticPreturi(this->servicii));
 			}
 		}
 
 		if (ok == 0) {
 			this->servicii = *ConsultatieExtinsa::listaServicii.begin();
 		}
-		ok = 0;
-		for (itList = ConsultatieExtinsa::listaServicii.begin(), itMap = ConsultatieExtinsa::listaPreturi.begin();
-			itList != ConsultatieExtinsa::listaServicii.end(), itMap != ConsultatieExtinsa::listaPreturi.end();
-			itList++, itMap++) {
-			
-		}
-
 	}
 
-	ConsultatieExtinsa(const int ora, const float pret, const int zi, const int luna, const int an, const Medic medic, string servicii):Consultatie(ora, pret, zi, luna, an, medic) {
+	ConsultatieExtinsa(const int ora, const int zi, const int luna, const int an, const Medic medic, string servicii):Consultatie(ora, zi, luna, an, medic) {
 		ConsultatieExtinsa::setListaServicii();
+		ConsultatieExtinsa::setListaPreturi();
 		list<string>::iterator itList;
 		int ok = 0;
 		for (itList = ConsultatieExtinsa::listaServicii.begin(); itList != ConsultatieExtinsa::listaServicii.end(); itList++) {
 			if (*itList == servicii) {
 				ok = 1;
 				this->servicii = servicii;
+				this->setPret(this->getStaticPreturi(this->servicii));
 			}
 		}
 		if (ok == 0) {
@@ -66,11 +64,15 @@ public:
 	ConsultatieExtinsa(const Consultatie c, const string servicii) {
 		ConsultatieExtinsa::setListaServicii();
 		list<string>::iterator itList;
+		ConsultatieExtinsa::setListaPreturi();
+
 		int ok = 0;
+		cout << endl<<"hahahahahahahaha"<< endl;
 		for (itList = ConsultatieExtinsa::listaServicii.begin(); itList != ConsultatieExtinsa::listaServicii.end(); itList++) {
 			if (*itList == servicii) {
 				ok = 1;
 				this->servicii = servicii;
+				this->setPret(this->getStaticPreturi(this->servicii));
 			}
 		}
 		if (ok == 0) {
@@ -79,21 +81,24 @@ public:
 	}
 
 	ConsultatieExtinsa(const ConsultatieExtinsa& c) :Consultatie(c) {
-		ConsultatieExtinsa::setListaServicii();
+
 		list<string>::iterator itList;
 		int ok = 0;
 		for (itList = ConsultatieExtinsa::listaServicii.begin(); itList != ConsultatieExtinsa::listaServicii.end(); itList++) {
 			if (*itList == c.servicii) {
 				ok = 1;
 				this->servicii = c.servicii;
+				this->setPret(this->getStaticPreturi(this->servicii));
 			}
 		}
 		if (ok == 0) {
 			this->servicii = *ConsultatieExtinsa::listaServicii.begin();
 		}
-		
 	}
 
+#pragma endregion
+
+	#pragma region MetodeStatice
 	static void setListaServicii() {
 		ConsultatieExtinsa::listaServicii.push_back("control");
 		ConsultatieExtinsa::listaServicii.push_back("analize");
@@ -104,26 +109,45 @@ public:
 
 	static void setListaPreturi() {
 		list<string>::iterator itList;
-		map<string, float>::iterator itMap;
-		float v[6] = {50, 125.5, 700, 200, 400};
+		map<float, string>::iterator itMap;
+		float v[5] = {50, 125.5, 700, 200, 400};
 		string* serv = new string[5];
 		int i = 0;
 		for (itList = ConsultatieExtinsa::listaServicii.begin(); itList != ConsultatieExtinsa::listaServicii.end(); itList++){
-			serv[i] = *itList;
+			ConsultatieExtinsa::listaPreturi[v[i]] = *itList;
 			i++;
 		}
 		i = 0;
-		typedef pair<string, float> pereche;
-		for (itMap = ConsultatieExtinsa::listaPreturi.begin(); itMap != ConsultatieExtinsa::listaPreturi.end(); itMap++) {
-			ConsultatieExtinsa::listaPreturi.insert(pereche(serv[i], v[i]));
-		}
+
+	}
+#pragma endregion
+
+	#pragma region MetodeAccesor
+	float getStaticPreturi(string serviciu){
+		 for (map<float,string>::iterator i = ConsultatieExtinsa::listaPreturi.begin(); i != ConsultatieExtinsa::listaPreturi.end(); i++)
+		 {
+			 if ((*i).second == serviciu) {
+				 return (*i).first;
+			 }
+		 }
 	}
 
-	void getStaticPreturi(){
-		cout << ConsultatieExtinsa::listaPreturi["analize"];
-		
-		
-	}
+	 string getServicii() {
+		 return this->servicii;
+	 }
+
+	 void setPretServiciu() {
+		 list<string>::iterator itList;
+		 int ok = 0;
+		 for (itList = ConsultatieExtinsa::listaServicii.begin(); itList != ConsultatieExtinsa::listaServicii.end(); itList++) {
+			 if (*itList == this->servicii) {
+				 ok = 1;
+				 this->setPret(this->getStaticPreturi(this->servicii));
+			 }
+		 }
+	 }
+
+#pragma endregion
 
 	#pragma region OperatorulEgal
 	ConsultatieExtinsa& operator= (ConsultatieExtinsa& c) {
@@ -151,7 +175,7 @@ public:
 		return out;
 	}
 #pragma endregion
-
+	
 	#pragma region OperatorCitire
 	friend istream& operator >> (istream& in, ConsultatieExtinsa& c) {
 		int zi;
@@ -184,12 +208,9 @@ public:
 				in >> ora;
 			}
 		}
-		float pret;
-		cout << "Introduceti pretul consultatiei:\n";
-		in >> pret;
-		c.setPret(pret);
 		Medic m;
-		in >> m;
+		cin >> m;
+		cout << m;
 		c.setMedic(m);
 		ok = false;
 		while (ok == false) {
@@ -211,7 +232,8 @@ public:
 			if (ok == false) {
 				cout << "Serviciile introduse nu se regasesc in lista posibila, mai incercati o data.\n";
 			}
-		}	
+		}
+		c.setPretServiciu();
 		return in;
 	}
 #pragma endregion
@@ -256,4 +278,4 @@ public:
 
 };
 list <string>ConsultatieExtinsa::listaServicii;
-map<string,float>ConsultatieExtinsa::listaPreturi;
+map<float, string>ConsultatieExtinsa::listaPreturi;

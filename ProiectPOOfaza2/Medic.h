@@ -26,7 +26,7 @@ public:
 #pragma region Constructor_cu_cativa_paramterii
     Medic(const char* nume, const string prenume, const float salariu, const int varsta, const string specializare) :Angajat(nume, prenume, salariu, varsta){
         Medic::setSpecializari();
-      
+        cout<<"AM AJUNS AICI";
         if (verifSpecializare(specializare, Medic::Listaspecializari)) {
             this->specializare = specializare;
         }

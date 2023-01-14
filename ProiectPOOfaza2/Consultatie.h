@@ -38,6 +38,16 @@ public:
     }
 #pragma endregion
 
+#pragma region Constructor_cu_cativa_ConsExtinsa
+    Consultatie(const int ora, const int zi, const int luna, const int an, const Medic medic) :id(contor++) {
+        this->data.setData(zi, luna, an);
+        if (ora >= 1 && ora <= 24) {
+            this->ora = ora;
+        }
+        this->medic = medic;
+    }
+#pragma endregion
+
 #pragma region Constructor_cu_toti_parametrii
     Consultatie( const int ora, const float pret, const int zi, const int luna, const int an, const Medic medic) :id(contor++) {
         this->data.setData(zi, luna, an);

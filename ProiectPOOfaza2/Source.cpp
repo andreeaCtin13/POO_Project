@@ -96,7 +96,24 @@ int main(){
 
 	//cin >> pac3;
 	//cout << pac3;
-	ConsultatieExtinsa ce(2, 3, 3, 2029, "consult");
-	ce.getStaticPreturi();
+	//cout << ce;
+	//cout << c;
+	//cout << c2;
+	//cout << c2.getMedic();
+	int* note;
+	note = new int[4];
+	note[0] = 10;
+	note[1] = 9;
+	note[2] = 10;
+	note[3] = 10;
+	Rezident s("Andreea", "Maria", 4000, 18, "Facultatea de Medicina UMF Carol Davila", note, 4);
+	
+	cout << s;
+
+	Rezident r1(s), r2;
+	r2 = r1;
+	cout << r1<<r2;
+	cin >> r2;
+	cout << r2;
 	//displayMenu("PacientiDeAdaugat.txt", "ConsultatiiDeAdaugat.txt", "MediciDeAdaugat.txt", "AngajatiDeAdaugat.txt", "AsistentiDeAdaugat.txt");
 }
