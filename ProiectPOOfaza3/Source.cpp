@@ -16,9 +16,9 @@
 #include "ConsultatieExtinsa.h"
 using namespace std;
 
-int main(){
-//int main(int argc, char* argv[]) {
-/*	if (argc == 6) {
+// int main() {
+int main(int argc, char* argv[]) {
+	if (argc == 6) {
 		displayMenu(argv[1], argv[2], argv[3], argv[4], argv[5]);
 	}
 	else {
@@ -31,14 +31,6 @@ int main(){
 		cout << "- Asistentii din cadrul centrului medical\n";
 		cout << "\nORDINEA FISIERELOR TREBUIE SA FIE IN CONFORMITATE CU ORDINEA DE MAI SUS\n";
 	}
-	*/
 	
-	string ccc = "09999";
-	if (verifTelefon(ccc.c_str())) {
-		cout << "HAHAHA";
-	}
-	else {
-		cout << "yay";
-	}
 	//displayMenu("PacientiDeAdaugat.txt", "ConsultatiiDeAdaugat.txt", "MediciDeAdaugat.txt", "AngajatiDeAdaugat.txt", "AsistentiDeAdaugat.txt");
 }

@@ -141,7 +141,7 @@ C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Rezident.h(299,64): warni
               TIP=float
           ]
 C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Rezident.h(314,35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Functii.h(58,24): warning C4244: 'initializing': conversion from 'TIP' to 'int', possible loss of data
+C:\Users\costa\Desktop\ProiectPOOfaza2\ProiectPOOfaza2\Functii.h(57,24): warning C4244: 'initializing': conversion from 'TIP' to 'int', possible loss of data
           with
           [
               TIP=float

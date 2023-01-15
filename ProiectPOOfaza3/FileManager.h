@@ -250,7 +250,6 @@ public:
 		p = new Pacient[nrObiecte];
 		for (int i = 0; i < nrObiecte; i++) {
 			this->fileInTxt >> p[i];
-			cout << p[i];
 		}
 
 		colectiePacienti.setColectie(nrObiecte, p);
